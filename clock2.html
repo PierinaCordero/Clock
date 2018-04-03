@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+		<script type="text/javascript">
+			
+			function time() {
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				h = checkTime(h);
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById('displayTime').innerHTML = h + ":" + m + ":" + s;
+				t = setTimeout(time, 500);
+			}
+
+			function checkTime(i) {
+				if (i < 10) {
+
+					i = "0" + i
+				};
+				return i;
+			 }
+
+
+			 /*function changeImg(imgNumber) {
+			 	var myImages = [clock_background1.jpg, clock_background2.jpg]
+			 	var imgShown = document.body.style.backgroundImage;
+			 	var newImgNumber = Math.floor(Math.random()*myImages.length);
+			 	document.body.style.backgroundImage = 'url('+myImages[newImgNumber]+')';
+			 }
+
+			 window.onload=changeImg; 
+			 */
+
+		</script>
+
+		<style type="text/css">
+
+			body {
+				background-image: url("https://content.mycutegraphics.com/backgrounds/newyear/new-year-clock-background.gif");
+			}
+			#displayTime {
+				text-align: center;
+				font-size: 100px;
+				border-style: solid;
+				border-color: black;
+				border-width: 5px;
+				margin-left: 810px;
+				margin-right: 710px;
+				margin-top: 360px;
+				background-color: white;
+				font-family: 'Raleway', sans-serif;
+
+     		}
+
+     		
+
+		</style>
+	</head>
+	<body class= 'bg' onload = "time()">
+		
+		<div id="displayTime"></div> 
+
+	</body>
+</html>
